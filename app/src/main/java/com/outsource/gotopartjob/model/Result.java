@@ -20,7 +20,7 @@ public class Result {
     @SerializedName(value = "subwayBusCount")
     private int subwayBusCount; //“버스+지하철” 결과 개수
 
-    @SerializedName(value = "pointDistance")
+     @SerializedName(value = "pointDistance")
     private double pointDistance; //출발지(SX, SY)와 도착지(EX, EY)의 직선 거리 (미터)
 
     @SerializedName(value = "startRadius")
@@ -31,6 +31,21 @@ public class Result {
 
     @SerializedName(value = "path")
     private List<Path> path; //결과 리스트 확장 노드
+
+    public Result() {
+    }
+
+    public Result(int searchType, int outTrafficCheck, int busCount, int subwayCount, int subwayBusCount, double pointDistance, int startRadius, int endRadius, List<Path> path) {
+        this.searchType = searchType;
+        this.outTrafficCheck = outTrafficCheck;
+        this.busCount = busCount;
+        this.subwayCount = subwayCount;
+        this.subwayBusCount = subwayBusCount;
+        this.pointDistance = pointDistance;
+        this.startRadius = startRadius;
+        this.endRadius = endRadius;
+        this.path = path;
+    }
 
     public int getSearchType() {
         return searchType;

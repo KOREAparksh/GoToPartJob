@@ -16,6 +16,17 @@ public class Station {
     @SerializedName(value = "x")
     private String x; //정류장 X좌표
 
+    public Station() {
+    }
+
+    public Station(int index, int stationID, String stationName, String x, String y) {
+        this.index = index;
+        this.stationID = stationID;
+        this.stationName = stationName;
+        this.x = x;
+        this.y = y;
+    }
+
     public int getIndex() {
         return index;
     }

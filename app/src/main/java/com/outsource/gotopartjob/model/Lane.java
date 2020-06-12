@@ -22,6 +22,18 @@ public class Lane {
     @SerializedName(value = "subwayCityCode")
     private int subwayCityCode	; //지하철 도시코드 (지하철인 경우에만 필수)
 
+    public Lane() {
+    }
+
+    public Lane(String name, String busNo, int type, int busID, int subwayCode, int subwayCityCode) {
+        this.name = name;
+        this.busNo = busNo;
+        this.type = type;
+        this.busID = busID;
+        this.subwayCode = subwayCode;
+        this.subwayCityCode = subwayCityCode;
+    }
+
     public String getName() {
         return name;
     }

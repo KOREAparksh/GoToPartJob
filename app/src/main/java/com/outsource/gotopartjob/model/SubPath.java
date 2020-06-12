@@ -55,7 +55,30 @@ public class SubPath {
     private int endID; //도착 정류장/역 코드
 
     @SerializedName(value = "passStopList")
-    private List<PassStopList> passStopList; //출발 정류장/역 코드
+    private PassStopList passStopList; //출발 정류장/역 코드
+
+    public SubPath() {
+    }
+
+    public SubPath(int trafficType, double distance, int sectionTime, int stationCount, List<Lane> lane, String startName, double startX, double startY, String endName, double endX, double endY, String way, int wayCode, String door, int startID, int endID, PassStopList passStopList) {
+        this.trafficType = trafficType;
+        this.distance = distance;
+        this.sectionTime = sectionTime;
+        this.stationCount = stationCount;
+        this.lane = lane;
+        this.startName = startName;
+        this.startX = startX;
+        this.startY = startY;
+        this.endName = endName;
+        this.endX = endX;
+        this.endY = endY;
+        this.way = way;
+        this.wayCode = wayCode;
+        this.door = door;
+        this.startID = startID;
+        this.endID = endID;
+        this.passStopList = passStopList;
+    }
 
     public int getTrafficType() {
         return trafficType;
@@ -185,11 +208,11 @@ public class SubPath {
         this.endID = endID;
     }
 
-    public List<PassStopList> getPassStopList() {
+    public PassStopList getPassStopList() {
         return passStopList;
     }
 
-    public void setPassStopList(List<PassStopList> passStopList) {
+    public void setPassStopList(PassStopList passStopList) {
         this.passStopList = passStopList;
     }
 }

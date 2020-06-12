@@ -43,7 +43,42 @@ public class Info {
     @SerializedName(value = "totalDistance")
     private int totalDistance; //총 거리
 
-    public Double getTrafficDistance() {
+    @SerializedName(value = "totalWalkTime")
+    private int totalWalkTime; //총 도보 거리
+
+    public Info() {
+    }
+
+    public Info(double trafficDistance, int totalWalk, int totalTime, int payment, int busTransitCount, int subwayTransitCount, String mapObj, String firstStartStation, String lastEndStation, int totalStationCount, int busStationCount, int subwayStationCount, int totalDistance, int totalWalkTime) {
+        this.trafficDistance = trafficDistance;
+        this.totalWalk = totalWalk;
+        this.totalTime = totalTime;
+        this.payment = payment;
+        this.busTransitCount = busTransitCount;
+        this.subwayTransitCount = subwayTransitCount;
+        this.mapObj = mapObj;
+        this.firstStartStation = firstStartStation;
+        this.lastEndStation = lastEndStation;
+        this.totalStationCount = totalStationCount;
+        this.busStationCount = busStationCount;
+        this.subwayStationCount = subwayStationCount;
+        this.totalDistance = totalDistance;
+        this.totalWalkTime = totalWalkTime;
+    }
+
+    public void setTrafficDistance(double trafficDistance) {
+        this.trafficDistance = trafficDistance;
+    }
+
+    public int getTotalWalkTime() {
+        return totalWalkTime;
+    }
+
+    public void setTotalWalkTime(int totalWalkTime) {
+        this.totalWalkTime = totalWalkTime;
+    }
+
+    public double getTrafficDistance() {
         return trafficDistance;
     }
 
