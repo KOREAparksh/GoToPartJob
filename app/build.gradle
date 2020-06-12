@@ -17,7 +17,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
 }
@@ -33,4 +33,6 @@ dependencies {
     compile 'com.google.code.findbugs:jsr305:2.0.1'
     compile project(":ODsayAndroidSDK")
 
+    implementation 'com.google.code.gson:gson:2.8.6'
+    //json데이터를 객체화 시키기 위한 구글에서 나온 라이브러리
 }
