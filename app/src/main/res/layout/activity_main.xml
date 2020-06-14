@@ -11,13 +11,86 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
-        android:text="do it"/>
+        android:text="주소 저장하기"/>
 
+    <LinearLayout
+        android:id="@+id/main_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="10dp"
+        app:layout_constraintTop_toBottomOf="@id/main_button">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="수신결과 : "/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="busCount : "/>
+
+            <TextView
+                android:id="@+id/busCount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  subwayCount : "/>
+
+            <TextView
+                android:id="@+id/subwayCount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="  subwayBusCount : "/>
+
+            <TextView
+                android:id="@+id/subwayBusCount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/main_result"
+        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="빠른 순 결과 :"/>
+
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:elevation="5dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
 
     <!--아래부분 만드시는 곳에 넣으셔야 합니다-->
     <!--과제면 사실 저작권 표기하진 않아도 되지-->
     <!--넣으면 있어보입니다-->
     <LinearLayout
+        android:id="@+id/copyright"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
